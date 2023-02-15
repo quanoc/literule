@@ -3,7 +3,7 @@ package com.yart.literule.core.rule;
 import com.yart.literule.core.entity.Facts;
 
 @FunctionalInterface
-public interface Condition {
+        public interface Condition {
 
     /**
      * Evaluate the condition according to the known facts.

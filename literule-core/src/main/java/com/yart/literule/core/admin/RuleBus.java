@@ -1,4 +1,4 @@
-package com.yart.literule.support.rule;
+package com.yart.literule.core.admin;
 
 import com.yart.literule.core.internal.util.CollectionUtil;
 import com.yart.literule.core.rule.Rules;
@@ -11,7 +11,8 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * 规则总线.  ..
+ * 规则总线.
+ * 管理执行集(Rules)的注册/注销
  */
 public class RuleBus {
 

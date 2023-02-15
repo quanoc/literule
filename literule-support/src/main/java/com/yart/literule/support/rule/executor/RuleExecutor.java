@@ -1,7 +1,9 @@
 package com.yart.literule.support.rule.executor;
 
+import com.yart.literule.core.admin.RuleBus;
 import com.yart.literule.core.context.ExecutionResults;
-import com.yart.literule.core.context.StatefulSession;
+import com.yart.literule.core.session.RuleSession;
+import com.yart.literule.core.session.StatefulSession;
 import com.yart.literule.core.context.WorkingMemory;
 import com.yart.literule.core.engine.DefaultRulesEngine;
 import com.yart.literule.core.entity.Facts;
@@ -12,7 +14,6 @@ import com.yart.literule.core.internal.util.StringUtil;
 import com.yart.literule.regex.rule.RegexRule;
 import com.yart.literule.support.aviator.rule.AviatorRule;
 import com.yart.literule.support.config.LiteRuleConfig;
-import com.yart.literule.support.rule.RuleBus;
 import com.yart.literule.core.rule.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,23 +67,8 @@ public class RuleExecutor {
         if (RuleBus.needInit()) {
             init();
         }
-        Facts envFacts = facts.clone();
-        Results results = new Results(envFacts);
-        WorkingMemory memory = new StatefulSession(envFacts, results);
-        if (StringUtil.isEmpty(gid)) {
-            RuleBus.getRuleSet().forEach(rules -> {
-                if (rules.isAlive()) {
-                    rulesEngine.fire(rules, memory);
-                }
-            });
-        } else {
-            Rules rules = RuleBus.getRuleSet(gid);
-            if (Objects.isNull(rules)) {
-                throw new RuleNotFoundException("couldn't find rules with the id["+gid+"]");
-            }
-            rulesEngine.fire(rules, memory);
-        }
-        return results;
+        RuleSession session = new StatefulSession();
+        return session.execute(gid, facts);
     }
 
 

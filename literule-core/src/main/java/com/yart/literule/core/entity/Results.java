@@ -61,6 +61,11 @@ public class Results extends BaseMapEntity<String, Object> implements ExecutionR
     public Facts getEnv() {
         return this.get(ENV_FACTS_KEY, Facts.class);
     }
+
+    public void setEnv(Facts env){
+        this.put(ENV_FACTS_KEY,env);
+    }
+
     private Facts getEnvNotNull() {
         Facts facts = getEnv();
         return Objects.isNull(facts) ? new Facts():facts;

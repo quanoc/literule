@@ -9,11 +9,9 @@ import com.yart.literule.core.entity.Facts;
 public interface WorkingMemory {
     void addPropagation(PropagationEntry propagationEntry);
 
-    void addPropagation(Facts env);
+    //void addPropagation(Facts env);
 
     Facts facts();
 
     ExecutionResults results();
-
-    void setResult(ExecutionResults results);
 }
