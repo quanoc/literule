@@ -1,7 +1,7 @@
 
 package com.yart.literule.regex.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 import com.yart.literule.core.rule.Action;
 import com.yart.literule.regex.match.PinYinMatcher;
 import org.slf4j.Logger;

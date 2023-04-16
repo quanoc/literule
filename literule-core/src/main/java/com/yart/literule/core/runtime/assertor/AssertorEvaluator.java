@@ -1,6 +1,6 @@
 package com.yart.literule.core.runtime.assertor;
 
-import com.yart.literule.core.calculate.DType;
+import com.yart.literule.core.model.data.DataType;
 import com.yart.literule.core.internal.exception.RuleException;
 import com.yart.literule.core.internal.util.CollectionUtil;
 import com.yart.literule.core.model.rule.Op;
@@ -25,7 +25,7 @@ public class AssertorEvaluator {
         loader.forEach(assertorSet::add);
     }
 
-    public boolean evaluate(Object left, Object right, DType datatype, Op op){
+    public boolean evaluate(Object left, Object right, DataType datatype, Op op){
         Assertor targetAssertor=null;
         for(Assertor assertor:assertorSet){
             if(assertor.support(op)){

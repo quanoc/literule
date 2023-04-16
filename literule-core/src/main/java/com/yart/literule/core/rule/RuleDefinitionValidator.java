@@ -1,7 +1,7 @@
 
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

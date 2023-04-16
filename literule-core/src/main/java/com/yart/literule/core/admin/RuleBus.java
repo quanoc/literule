@@ -14,6 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 规则总线.
  * 管理执行集(Rules)的注册/注销
  */
+@Deprecated
 public class RuleBus {
 
     private static final Logger LOG = LoggerFactory.getLogger(RuleBus.class);

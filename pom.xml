@@ -13,9 +13,10 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>literule-support</module>
     <module>literule-core</module>
     <module>literule-regex</module>
+    <module>literule-support</module>
+    <module>literule-text</module>
   </modules>
 
   <properties>

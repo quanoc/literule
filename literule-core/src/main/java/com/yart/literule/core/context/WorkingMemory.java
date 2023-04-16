@@ -1,6 +1,6 @@
 package com.yart.literule.core.context;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 /**
  * 存放要匹配规则的事实

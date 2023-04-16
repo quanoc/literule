@@ -15,7 +15,7 @@ public class RuleBuilder {
     private String name = Rule.DEFAULT_NAME;
     private String description = Rule.DEFAULT_DESCRIPTION;
     private int priority = Rule.DEFAULT_PRIORITY;
-    private Condition.ConditionLogic ruleLogic;
+    private Rule.ConditionLogic ruleLogic;
 
     private final List<Condition> conditions = new ArrayList<>();
     private final List<Action> actions = new ArrayList<>();
@@ -75,7 +75,7 @@ public class RuleBuilder {
         return this;
     }
 
-    public RuleBuilder logic(Condition.ConditionLogic logic) {
+    public RuleBuilder logic(Rule.ConditionLogic logic) {
         this.ruleLogic = logic;
         return this;
     }
@@ -99,6 +99,6 @@ public class RuleBuilder {
      */
     public Rule build() {
         return new DefaultRule(rid, name, description, priority,
-                conditions, actions, Objects.nonNull(ruleLogic) ? ruleLogic : Condition.ConditionLogic.OR);
+                conditions, actions, Objects.nonNull(ruleLogic) ? ruleLogic : Rule.ConditionLogic.OR);
     }
 }

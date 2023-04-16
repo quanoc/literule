@@ -1,6 +1,6 @@
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 /**
  * This interface represents a rule's action.

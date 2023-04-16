@@ -1,6 +1,6 @@
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 import com.yart.literule.core.internal.exception.NoSuchFactException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

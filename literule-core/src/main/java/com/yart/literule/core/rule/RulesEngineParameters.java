@@ -1,6 +1,6 @@
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.engine.DefaultRulesEngine;
+import com.yart.literule.core.runtime.engine.DefaultRulesEngine;
 
 /**
  * Parameters of a rules engine.

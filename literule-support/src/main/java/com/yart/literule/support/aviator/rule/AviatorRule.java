@@ -1,9 +1,10 @@
 package com.yart.literule.support.aviator.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 import com.yart.literule.core.rule.Action;
 import com.yart.literule.core.rule.BasicRule;
 import com.yart.literule.core.rule.Condition;
+import com.yart.literule.core.rule.Rule;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,4 +72,10 @@ public class AviatorRule extends BasicRule {
             action.execute(facts);
         }
     }
+
+    @Override
+    public RuleType type() {
+        return RuleType.Script;
+    }
+
 }

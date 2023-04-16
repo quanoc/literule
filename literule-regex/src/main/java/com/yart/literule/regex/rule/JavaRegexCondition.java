@@ -1,6 +1,6 @@
 package com.yart.literule.regex.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 import com.yart.literule.core.rule.Condition;
 
 import java.util.Objects;

@@ -2,7 +2,7 @@
 package com.yart.literule.core.rule;
 
 import com.yart.literule.core.context.WorkingMemory;
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 import java.util.Collections;
 import java.util.List;
@@ -49,5 +49,11 @@ public interface RulesEngine {
      */
     default Map<Rule, Boolean> check(Rules rules, Facts facts) {
         return Collections.emptyMap();
+    }
+
+    EngineType engineType();
+
+    enum EngineType{
+        Default, Flow
     }
 }

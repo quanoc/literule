@@ -1,11 +1,16 @@
 package com.yart.literule.core.context;
 
-import com.yart.literule.core.entity.Facts;
-import com.yart.literule.core.entity.RulesResult;
+import com.yart.literule.core.model.basic.Facts;
+import com.yart.literule.core.model.basic.RulesResult;
 
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * 规则执行结果.
+ *
+ * @author zhangquanquan 2021.10.22.
+ */
 public interface ExecutionResults {
     String RULES_RESULTS_KEY = "RULES_RESULTS";
 

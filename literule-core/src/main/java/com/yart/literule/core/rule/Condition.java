@@ -1,9 +1,9 @@
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 @FunctionalInterface
-        public interface Condition {
+public interface Condition {
 
     /**
      * Evaluate the condition according to the known facts.
@@ -23,9 +23,4 @@ import com.yart.literule.core.entity.Facts;
      * A NoOp {@link Condition} that always returns true.
      */
     Condition TRUE = facts -> true;
-
-
-    enum ConditionLogic {
-        AND, OR
-    }
 }

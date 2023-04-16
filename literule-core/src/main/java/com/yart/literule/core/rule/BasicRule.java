@@ -1,13 +1,14 @@
 
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 import java.util.Objects;
 
 
 /**
  * Basic rule implementation class that provides common methods.
+ * @author zhangquanquan
  */
 public class BasicRule implements Rule {
 
@@ -90,6 +91,11 @@ public class BasicRule implements Rule {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public RuleType type() {
+        return RuleType.None;
     }
 
     public String getDescription() {

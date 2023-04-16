@@ -1,6 +1,6 @@
 package com.yart.literule.core.rule;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 /**
  * Abstraction for a rule that can be fired by a rules engine.
@@ -18,7 +18,6 @@ public interface Rule extends Comparable<Rule> {
      * Default rule name.
      */
     String DEFAULT_NAME = "rule";
-
     /**
      * Default rule description.
      */
@@ -45,6 +44,8 @@ public interface Rule extends Comparable<Rule> {
     default String getName() {
         return DEFAULT_NAME;
     }
+
+    RuleType type();
 
     /**
      * Getter for rule description.
@@ -74,5 +75,13 @@ public interface Rule extends Comparable<Rule> {
      * @throws Exception 如果执行操作期间发生错误, 则抛出异常.
      */
     void execute(Facts facts) throws Exception;
+
+    enum RuleType{
+        None,Normal,Regex,Script
+    }
+
+    enum ConditionLogic {
+        AND, OR
+    }
 
 }

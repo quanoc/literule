@@ -1,9 +1,12 @@
 package com.yart.literule.core.rule;
 
+import com.yart.literule.core.model.decision.BaseDecision;
+import com.yart.literule.core.model.decision.DecisionType;
+
 import java.util.*;
 
 
-public class Rules implements Iterable<Rule> {
+public class Rules extends BaseDecision implements Iterable<Rule> {
     private final RuleLogic DEFAULT_ruleLogic = RuleLogic.OR;
     /**
      * rules id.
@@ -163,5 +166,15 @@ public class Rules implements Iterable<Rule> {
                 .filter(rule -> rule.getName().equalsIgnoreCase(ruleName))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public String getId() {
+        return gid;
+    }
+
+    @Override
+    public DecisionType type() {
+        return DecisionType.set;
     }
 }

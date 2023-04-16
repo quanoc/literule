@@ -1,6 +1,6 @@
 package com.yart.literule.core.internal.util;
 
-import com.yart.literule.core.entity.Facts;
+import com.yart.literule.core.model.basic.Facts;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

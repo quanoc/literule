@@ -5,7 +5,7 @@ package com.yart.literule.support.enums;
  */
 public enum ParseTypeEnum {
     YML("yml"), JSON("json"),
-    MONGODB("mongodb");
+    MONGODB("mongodb"), EXCEL("excel");
     private final String name;
     ParseTypeEnum(String name){
         this.name = name;
