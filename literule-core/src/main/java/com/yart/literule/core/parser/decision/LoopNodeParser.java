@@ -12,7 +12,7 @@ public class LoopNodeParser implements NodeParser {
 
     @Override
     public NodeType type() {
-        return NodeType.LoopRule;
+        return NodeType.Loop;
     }
 
     @Override

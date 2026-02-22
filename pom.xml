@@ -17,6 +17,7 @@
     <module>literule-regex</module>
     <module>literule-support</module>
     <module>literule-text</module>
+    <module>literule-example</module>
   </modules>
 
   <properties>

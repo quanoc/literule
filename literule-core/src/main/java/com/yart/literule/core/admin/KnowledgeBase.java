@@ -18,7 +18,7 @@ import java.util.Objects;
  *  c. 负责规则和决策的获取.
  *  d. 后续通过 不同的知识包对 规则元数据进行隔离（是否有必要）.
  *
- * @author zhangquanquan
+ * @author zhangquanquan 2022.08.10
  */
 public class KnowledgeBase implements KnowledgePackage{
     private static final KnowledgeBase instance = new KnowledgeBase();
